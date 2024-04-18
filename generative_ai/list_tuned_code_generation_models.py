@@ -15,7 +15,7 @@
 # [START aiplatform_sdk_list_tuned_code_generation_models]
 
 import vertexai
-from vertexai.preview.language_models import CodeGenerationModel
+from vertexai.language_models import CodeGenerationModel
 
 
 def list_tuned_code_generation_models(
@@ -33,4 +33,5 @@ def list_tuned_code_generation_models(
 
 # [END aiplatform_sdk_list_tuned_code_generation_models]
 if __name__ == "__main__":
-    list_tuned_code_generation_models()
+    import os
+    list_tuned_code_generation_models(os.environ["IAM_PROJECT_ID"], "us-central1")
